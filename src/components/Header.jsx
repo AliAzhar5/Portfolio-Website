@@ -1,7 +1,7 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+// Import your logo
+import logo_portfolio from "../assets/logo_portfolio.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,8 +50,16 @@ const Header = () => {
   return (
     <header className="fixed w-full top-0 left-0 py-2 sm:py-4 shadow-md bg-[#5361FF] z-50">
       <div className="container mx-auto flex items-center justify-between px-4 lg:px-8">
-        <div className="text-2xl sm:text-3xl font-bold text-white">
-          Ali Azhar
+        {/* Logo */}
+        <div className="flex items-center">
+          <img
+            src={logo_portfolio || "/placeholder.svg"}
+            alt="Logo"
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16"
+          />
+          <span className="px-4 text-white text-2xl lg:4xl font-bold">
+            ALI AZHAR
+          </span>
         </div>
 
         {/* Mobile menu button */}
@@ -66,10 +74,10 @@ const Header = () => {
         <div
           className={`lg:flex items-center lg:justify-end flex-grow space-y-4 lg:space-y-0 lg:space-x-6 
             absolute lg:relative top-full left-0 right-0 lg:top-auto 
-            bg-white lg:bg-transparent p-4 lg:p-0 lg:pr-16
+            bg-[#5361FF] text-white lg:bg-transparent p-4 lg:p-0 lg:pr-16
             ${isMenuOpen ? "flex flex-col" : "hidden lg:flex"}`}
         >
-          <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0 lg:space-x-8 font-sans text-base sm:text-lg md:text-lg text-gray-800 lg:text-white font-medium">
+          <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0 space-x-4 lg:space-x-8 font-sans text-sm lg:text-lg md:text-lg text-white font-medium">
             {navitems.map((item, index) => (
               <button
                 key={index}

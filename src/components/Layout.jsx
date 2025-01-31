@@ -11,7 +11,7 @@ const Layout = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-8">
         <section id="home" className="min-h-screen pt-20">
           <Home />
         </section>

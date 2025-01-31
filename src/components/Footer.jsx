@@ -29,43 +29,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About Column */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-4">About</h3>
-            <p className="text-gray-400 leading-relaxed">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts.
-            </p>
-            <div className="flex space-x-4 pt-4">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#5361FF] transition-colors"
-              >
-                <i className="fab fa-twitter text-white"></i>
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#5361FF] transition-colors"
-              >
-                <i className="fab fa-facebook-f text-white"></i>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#5361FF] transition-colors"
-              >
-                <i className="fab fa-instagram text-white"></i>
-              </a>
-            </div>
-          </div>
-
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Links Column */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Links</h3>
@@ -100,7 +65,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Questions Column */}
+          {/* Contact Column */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <ul className="space-y-4">

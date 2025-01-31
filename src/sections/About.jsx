@@ -1,42 +1,59 @@
 const About = () => {
   const personalInfo = [
     { label: "Name", value: "Ali Azhar" },
-    { label: "Email", value: "aalliiazhar@example.com" },
+    { label: "Dob", value: "June 09, 2000" },
     { label: "Phone", value: "+923486665515" },
+    { label: "Email", value: "aalliiazhar@gmail.com" },
     { label: "Location", value: "Lahore, Pakistan" },
-    { label: "Education", value: "Bachelor's in Computer Science" },
-    { label: "Experience", value: "8+ Months" },
+    { label: "Experience", value: "2+ Months" },
     { label: "Languages", value: "English, Urdu" },
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between gap-12 min-h-[calc(100vh-5rem)] py-10">
-      <div className="hidden lg:flex flex-1 justify-center items-center">
-        <div className="w-80 h-80 rounded-lg overflow-hidden">
-          <img
-            src="https://nicky-kosasih.netlify.app/assets/img/profile.png"
-            alt="About Me"
-            className="w-full h-full object-cover"
-          />
+    <div className="min-h-[calc(100vh-5rem)] py-10">
+      <div className="flex flex-col lg:flex-row gap-12">
+        {/* Left Column - About Text */}
+        <div className="lg:w-1/2 space-y-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-8">
+            About Me
+          </h2>
+          <div className="space-y-4 text-gray-700 text-justify">
+            <p className="text-lg leading-relaxed">
+              With a strong foundation in both frontend and backend
+              technologies, I enjoy tackling complex problems and turning them
+              into simple, beautiful applications. I'm constantly learning and
+              adapting to new technologies to stay at the forefront of web
+              development.
+            </p>
+            <p className="text-lg leading-relaxed">
+              When I'm not coding, you can find me exploring new technologies,
+              contributing to open-source projects, or sharing my knowledge with
+              the developer community. I believe in writing clean, maintainable
+              code and creating user-friendly applications that solve real-world
+              problems.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="flex-1 space-y-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
-          About Me
-        </h2>
 
-        <div className="grid grid-cols-1 gap-4">
-          {personalInfo.map((info, index) => (
-            <div
-              key={index}
-              className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4"
-            >
-              <span className="text-[#5361FF] font-medium min-w-[100px]">
-                {info.label}:
-              </span>
-              <span className="text-gray-700">{info.value}</span>
-            </div>
-          ))}
+        {/* Right Column - Personal Info */}
+        <div className="lg:w-1/2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {personalInfo.map((info, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+                  <span className="text-[#5361FF] font-medium whitespace-nowrap">
+                    {info.label}:
+                  </span>
+                  <span className="text-gray-700 sm:text-right">
+                    {info.value}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
